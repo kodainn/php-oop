@@ -1,0 +1,12 @@
+version: '1'
+services:
+  php_app:
+    container_name: php_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./src
+        target: /recursion-php/src
+    tty: true
